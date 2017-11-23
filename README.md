@@ -2,24 +2,40 @@
 Little code 
 ## How to install
 
-First make storage folder writable. 
-
 ```
-cp .env.example .env
+composer require 4nd114/littlecode
 ```
 
 ```
-composer install
+config/app.php
+
+Set Provider 
+Andre\LittleCode\LittleCodeServiceProvider::class,
 ```
 
 ```
-php artisan key:generate
+config/app.php
+
+Set aliases 
+'LittleCode' => Andre\LittleCode\Facades\LittleCode::class,
 ```
+## Usage
+```
+validate Name
+LittleCode::NameValidator("Andre Luiz");
 
 ```
-php artisan migrate --seed
 ```
+validate Cpf
+LittleCode::CpfValidator("483.439.531-69"); OR LittleCode::CpfValidator("48343953169");
 
 ```
-php artisan storage:link
+```
+validate Cnpj
+LittleCode::CnpjValidator("80.037.333/0001-24"); OR LittleCode::CnpjValidator("80037333000124");
+
+```
+```
+Find Cep
+LittleCode::FindCep("35182514"); OR LittleCode::FindCep("35182-514");
 ```
