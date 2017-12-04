@@ -20,6 +20,7 @@ Set aliases
 'LittleCode' => Andre\LittleCode\Facades\LittleCode::class,
 ```
 ## Usage
+Use LittleCode;
 ```
 validate Name
 LittleCode::NameValidator("Andre Luiz");
